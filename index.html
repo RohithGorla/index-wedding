@@ -7,9 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Noto+Serif+Telugu:wght@400;700&family=Mandali&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf3e4;--card:#fffaf0;--ink:#4a1420;--maroon:#7a1b2d;--gold:#b8862b;--soft:#8a6a5a;--line:#e3cfa6;
+:root{--bg:#fbf6ea;--card:#fffaf0;--ink:#16302f;--maroon:#0f4c4a;--gold:#b8862b;--soft:#6b7a76;--line:#e3cfa6;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0d14;--card:#3a1520;--ink:#f6e7c8;--maroon:#e9b8a0;--gold:#e0b560;--soft:#cfae9a;--line:#6b3a2a}}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Serif Telugu','Cormorant Garamond',Georgia,serif;line-height:1.7;overflow-x:hidden}
@@ -19,16 +18,16 @@ body.lang-en{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.08em}
 h1,h2,h3{font-weight:700;margin:0;color:var(--maroon)}
 section{max-width:680px;margin:0 auto;padding:56px 22px;text-align:center}
 .orn{color:var(--gold);letter-spacing:.5em;font-size:1.1rem;margin:10px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;margin:16px 0;box-shadow:0 6px 24px rgba(120,60,20,.08)}
+.card{border-top:3px solid var(--gold)!important;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;margin:16px 0;box-shadow:0 6px 24px rgba(15,76,74,.10)}
 .card h3{font-size:1.15rem;margin-bottom:4px}
 .big{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:700;line-height:1.2}
 .small{color:var(--soft);font-size:.92rem}
 
 /* seal / opening */
-#cover{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(circle at 50% 40%,#9a2438,#5a0f1d);color:#f6e2b4;text-align:center;padding:24px;transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
+#cover{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(circle at 50% 40%,#17706b,#082f2e);color:#f6e2b4;text-align:center;padding:24px;transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
 #cover.open{transform:translateY(-100%)}
 #cover .om{font-size:1.1rem;letter-spacing:.2em;margin-bottom:18px;opacity:.9}
-#seal{width:128px;height:128px;border-radius:50%;border:3px double #e7c36b;background:radial-gradient(circle,#b0283e,#7a1b2d);color:#f6e2b4;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;cursor:pointer;box-shadow:0 0 0 8px rgba(231,195,107,.15),0 10px 30px rgba(0,0,0,.4);animation:beat 2.4s ease-in-out infinite}
+#seal{width:128px;height:128px;border-radius:50%;border:3px double #e7c36b;background:radial-gradient(circle,#1b7d77,#0f4c4a);color:#f6e2b4;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;cursor:pointer;box-shadow:0 0 0 8px rgba(231,195,107,.15),0 10px 30px rgba(0,0,0,.4);animation:beat 2.4s ease-in-out infinite}
 #seal:focus-visible,.btn:focus-visible,.lang:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @keyframes beat{50%{transform:scale(1.06)}}
 #cover h2{color:#f6e2b4;margin:20px 0 6px;font-size:1.6rem}
@@ -36,10 +35,9 @@ section{max-width:680px;margin:0 auto;padding:56px 22px;text-align:center}
 
 .lang{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:12px;z-index:60;background:var(--maroon);color:#fff7e0;border:0;border-radius:99px;padding:8px 16px;font:inherit;font-size:.85rem;cursor:pointer}
 body:not(.lang-en) .lang{color:#fff7e0}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn:not(.alt),:root:not([data-theme="light"]) .lang{color:#2a0d14!important}}
 
 /* hero */
-#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(var(--bg),var(--bg))}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(ellipse at 50% 0,rgba(255,253,246,.6),transparent 65%)}
 .names{font-size:clamp(2.4rem,11vw,4.2rem);line-height:1.25;margin:14px 0}
 .amp{display:block;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.6em}
 .date-badge{display:inline-block;border:1px solid var(--gold);border-left:0;border-right:0;padding:10px 26px;margin-top:10px}
@@ -68,6 +66,11 @@ body:not(.lang-en) .btn.alt{color:var(--maroon)}
 .rv{opacity:0;transform:translateY(18px);transition:.9s}.rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){#seal,.petal{animation:none}.rv{opacity:1;transform:none;transition:none}#cover{transition:none}html{scroll-behavior:auto}}
 footer{padding:40px 20px 60px;text-align:center;color:var(--soft);font-size:.9rem}
+#musicBtn{display:none;position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;width:44px;height:44px;border-radius:50%;border:1px solid #c9a24a;background:var(--maroon);color:#fff7e0;font-size:20px;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+#musicBtn.show{display:block}
+/* deity watermark */
+#cover::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(231,195,107,.22),transparent 60%),url(venkateswara.webp) center bottom/auto 90% no-repeat;opacity:.15}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url(venkateswara.webp) center 55%/min(88vw,460px) auto no-repeat;opacity:.17}
 </style>
 </head>
 <body>
@@ -153,6 +156,9 @@ footer{padding:40px 20px 60px;text-align:center;color:var(--soft);font-size:.9re
 </section>
 <footer>Sai Mahesh &amp; Lohitha Sri · 25 November 2026</footer>
 
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+<button id="musicBtn" aria-label="Toggle music">🔊</button>
+
 <script>
 (function(){
   var body=document.body,cover=document.getElementById('cover'),btn=document.getElementById('langBtn');
@@ -163,7 +169,7 @@ footer{padding:40px 20px 60px;text-align:center;color:var(--soft);font-size:.9re
     btn.textContent=en?'తెలుగు':'English';
     try{localStorage.setItem('lang',en?'en':'te')}catch(e){}
   };
-  var colors=['#c2314b','#e9a23b','#f4c6a5','#d9774a','#b8862b'];
+  var colors=['#e9c46a','#d4a73c','#f4e3b2','#2a9d8f','#e9a23b'];
   function petals(n){
     if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
     for(var i=0;i<n;i++){(function(i){setTimeout(function(){
@@ -175,7 +181,14 @@ footer{padding:40px 20px 60px;text-align:center;color:var(--soft);font-size:.9re
       document.body.appendChild(p);setTimeout(function(){p.remove()},13000);
     },i*160)})(i)}
   }
+  var bgm=document.getElementById('bgm'),mbtn=document.getElementById('musicBtn');
+  mbtn.onclick=function(){
+    if(bgm.paused){bgm.play();mbtn.textContent='🔊'}else{bgm.pause();mbtn.textContent='🔇'}
+  };
   document.getElementById('seal').onclick=function(){
+    bgm.volume=.6;
+    bgm.play().then(function(){mbtn.textContent='🔊'}).catch(function(){mbtn.textContent='🔇'});
+    mbtn.classList.add('show');
     cover.classList.add('open');
     setTimeout(function(){cover.style.display='none'},1500);
     petals(45);
