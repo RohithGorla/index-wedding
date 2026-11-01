@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sai Mahesh & Lohitha Sri – Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Noto+Serif+Telugu:wght@400;700&family=Mandali&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf3e4;--card:#fffaf0;--ink:#4a1420;--maroon:#7a1b2d;--gold:#b8862b;--soft:#8a6a5a;--line:#e3cfa6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0d14;--card:#3a1520;--ink:#f6e7c8;--maroon:#e9b8a0;--gold:#e0b560;--soft:#cfae9a;--line:#6b3a2a}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Serif Telugu','Cormorant Garamond',Georgia,serif;line-height:1.7;overflow-x:hidden}
+.en{display:none}body.lang-en .en{display:inline}body.lang-en .te{display:none}
+body.lang-en .blk.en{display:block}body:not(.lang-en) .blk.te{display:block}.blk.te,.blk.en{display:none}
+body.lang-en{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.08em}
+h1,h2,h3{font-weight:700;margin:0;color:var(--maroon)}
+section{max-width:680px;margin:0 auto;padding:56px 22px;text-align:center}
+.orn{color:var(--gold);letter-spacing:.5em;font-size:1.1rem;margin:10px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;margin:16px 0;box-shadow:0 6px 24px rgba(120,60,20,.08)}
+.card h3{font-size:1.15rem;margin-bottom:4px}
+.big{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:700;line-height:1.2}
+.small{color:var(--soft);font-size:.92rem}
+
+/* seal / opening */
+#cover{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(circle at 50% 40%,#9a2438,#5a0f1d);color:#f6e2b4;text-align:center;padding:24px;transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
+#cover.open{transform:translateY(-100%)}
+#cover .om{font-size:1.1rem;letter-spacing:.2em;margin-bottom:18px;opacity:.9}
+#seal{width:128px;height:128px;border-radius:50%;border:3px double #e7c36b;background:radial-gradient(circle,#b0283e,#7a1b2d);color:#f6e2b4;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;cursor:pointer;box-shadow:0 0 0 8px rgba(231,195,107,.15),0 10px 30px rgba(0,0,0,.4);animation:beat 2.4s ease-in-out infinite}
+#seal:focus-visible,.btn:focus-visible,.lang:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@keyframes beat{50%{transform:scale(1.06)}}
+#cover h2{color:#f6e2b4;margin:20px 0 6px;font-size:1.6rem}
+#cover p{margin:0;opacity:.85}
+
+.lang{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:12px;z-index:60;background:var(--maroon);color:#fff7e0;border:0;border-radius:99px;padding:8px 16px;font:inherit;font-size:.85rem;cursor:pointer}
+body:not(.lang-en) .lang{color:#fff7e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn:not(.alt),:root:not([data-theme="light"]) .lang{color:#2a0d14!important}}
+
+/* hero */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(var(--bg),var(--bg))}
+.names{font-size:clamp(2.4rem,11vw,4.2rem);line-height:1.25;margin:14px 0}
+.amp{display:block;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.6em}
+.date-badge{display:inline-block;border:1px solid var(--gold);border-left:0;border-right:0;padding:10px 26px;margin-top:10px}
+.shloka{font-size:.95rem;color:var(--soft);line-height:2}
+.tri{display:flex;justify-content:space-between;gap:8px;font-size:.9rem;color:var(--gold);margin-bottom:16px}
+
+/* countdown */
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.cd div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 2px}
+.cd b{display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--maroon)}
+.cd span{font-size:.8rem;color:var(--soft)}
+
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
+.btn{display:inline-block;background:var(--maroon);color:#fff7e0;text-decoration:none;border-radius:99px;padding:11px 22px;font-size:.95rem;border:0;cursor:pointer;font-family:inherit;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon)}
+body:not(.lang-en) .btn.alt{color:var(--maroon)}
+.fam p{margin:4px 0}.names2{font-weight:700;color:var(--maroon)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.grid2 p{margin:3px 0;font-size:.92rem}
+@media(max-width:480px){.grid2{grid-template-columns:1fr}}
+
+/* petals */
+.petal{position:fixed;top:-30px;z-index:40;pointer-events:none;width:12px;height:16px;border-radius:70% 0 70% 0;opacity:.8;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(540deg);opacity:.2}}
+.rv{opacity:0;transform:translateY(18px);transition:.9s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){#seal,.petal{animation:none}.rv{opacity:1;transform:none;transition:none}#cover{transition:none}html{scroll-behavior:auto}}
+footer{padding:40px 20px 60px;text-align:center;color:var(--soft);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<div id="cover">
+  <div class="om">॥ శ్రీరస్తు · శుభమస్తు · అవిఘ్నమస్తు ॥</div>
+  <button id="seal" aria-label="Open invitation">S &amp; L</button>
+  <h2><span class="te">సాయి మహేష్ &amp; లోహిత శ్రీ</span><span class="en">Sai Mahesh &amp; Lohitha Sri</span></h2>
+  <p><span class="te">ఆహ్వానం చూడటానికి ముద్రను తాకండి</span><span class="en">Tap the seal to open your invitation</span></p>
+</div>
+
+<button class="lang" id="langBtn" aria-label="Switch language">English</button>
+
+<section id="hero">
+  <div class="tri"><span>శ్రీరస్తు</span><span>శుభమస్తు</span><span>అవిఘ్నమస్తు</span></div>
+  <div class="orn">❖ ❖ ❖</div>
+  <p class="small"><span class="te">గొర్ల వారి వివాహ మహోత్సవ ఆహ్వాన శుభ పత్రిక</span><span class="en">The Gorla family invites you to the wedding of</span></p>
+  <h1 class="names"><span class="te">సాయి మహేష్<span class="amp">&amp;</span>లోహిత శ్రీ</span><span class="en">Sai Mahesh<span class="amp">&amp;</span>Lohitha Sri</span></h1>
+  <div class="date-badge"><div class="big">25.11.2026</div><div class="small"><span class="te">బుధవారం · కార్తీక బహుళ పాడ్యమి</span><span class="en">Wednesday · Kartika Bahula Padyami</span></div></div>
+  <p class="shloka rv" style="margin-top:34px">జానక్యాః కమలామలాంజలి పుటే యాః పద్మరాగాయితాః<br>స్రస్తా రాఘవ మస్తకేచ విలసత్కుంద ప్రసూనాయితాః<br>స్రస్తాశ్యామల కాయకాంతి కలితా యాః ఇంద్ర నీలాయితాః<br>ముక్తాస్తాః శుభదా భవంతు భవతాం శ్రీరామ వైవాహికాః ॥</p>
+</section>
+
+<section class="fam rv">
+  <div class="orn">❖</div>
+  <p><span class="te">శ్రీ గొర్ల పుల్లారావు &amp; శ్రీమతి పాపాయమ్మ దంపతుల జ్యేష్ఠ కుమారుడు శ్రీ గొర్ల శ్రీనివాస రావు &amp; శ్రీమతి కొండాలమ్మ దంపతుల జ్యేష్ఠ కుమారుడు</span><span class="en">Eldest son of Sri Gorla Srinivasa Rao &amp; Smt. Kondalamma, and grandson of Sri Gorla Pullarao &amp; Smt. Papayamma</span></p>
+  <h2><span class="te">వరుడు: సాయి మహేష్</span><span class="en">Groom: Sai Mahesh</span></h2>
+  <p class="orn">♥</p>
+  <h2><span class="te">వధువు: లోహిత శ్రీ</span><span class="en">Bride: Lohitha Sri</span></h2>
+  <p><span class="te">(చింతాయిగూడెం వాస్తవ్యులు శ్రీ పులపాక శ్రీనుబాబు &amp; శ్రీమతి వెంకటరమణ గార్ల కుమార్తె)</span><span class="en">Daughter of Sri Pulapaka Srinubabu &amp; Smt. Venkataramana, Chintayigudem</span></p>
+  <p class="small"><span class="te">ఇచ్చి వివాహము జరుపుటకు దైవజ్ఞులచే శుభముహూర్తము నిశ్చయించబడినది.</span><span class="en">The auspicious muhurtham has been fixed by the priests.</span></p>
+</section>
+
+<section class="rv">
+  <h2><span class="te">శుభ ముహూర్తం</span><span class="en">The Celebration</span></h2>
+  <div class="card">
+    <h3><span class="te">విందు</span><span class="en">Vindu (Dinner reception)</span></h3>
+    <div class="big">7:00 PM</div>
+    <p class="small"><span class="te">బుధవారం, 25-11-2026 రాత్రి 7:00 గంటల నుండి</span><span class="en">Wednesday, 25 Nov 2026, from 7:00 PM</span></p>
+  </div>
+  <div class="card">
+    <h3><span class="te">వివాహ ముహూర్తం</span><span class="en">Wedding muhurtham</span></h3>
+    <div class="big">9:35 PM</div>
+    <p class="small"><span class="te">స్వస్తిశ్రీ చాంద్రమాన శ్రీ పరాభవ నామ సంవత్సర కార్తీక మాస బహుళ పాడ్యమి, రోహిణి నక్షత్రయుక్త కర్కాటక లగ్న మందు</span><span class="en">Parabhava Nama Samvatsaram, Kartika Masa Bahula Padyami, Rohini Nakshatra, Karkataka Lagnam</span></p>
+  </div>
+  <p class="small" style="margin-top:26px"><span class="te">వివాహానికి మిగిలిన సమయం</span><span class="en">Time until the muhurtham</span></p>
+  <div class="cd" id="cd" aria-live="off"><div><b id="d">--</b><span><span class="te">రోజులు</span><span class="en">Days</span></span></div><div><b id="h">--</b><span><span class="te">గంటలు</span><span class="en">Hours</span></span></div><div><b id="m">--</b><span><span class="te">నిమిషాలు</span><span class="en">Minutes</span></span></div><div><b id="s">--</b><span><span class="te">సెకన్లు</span><span class="en">Seconds</span></span></div></div>
+  <div class="btns">
+    <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sai+Mahesh+%26+Lohitha+Sri+Wedding&dates=20261125T133000Z/20261125T180500Z&location=Sri+Jaya+Gardens+A%2FC+Function+Hall%2C+NH-16%2C+Alampuram%2C+Pentapadu&details=Dinner+7%3A00+PM%2C+Muhurtham+9%3A35+PM"><span class="te">క్యాలెండర్‌లో చేర్చండి</span><span class="en">Add to calendar</span></a>
+  </div>
+</section>
+
+<section class="rv">
+  <h2><span class="te">కళ్యాణ వేదిక</span><span class="en">Venue</span></h2>
+  <div class="card">
+    <h3>శ్రీ జయ గార్డెన్స్ ఎ/సి. ఫంక్షన్ హాల్<br><span style="font-family:'Cormorant Garamond',serif">Sri Jaya Gardens A/C Function Hall</span></h3>
+    <p class="small"><span class="te">I.O.C బ్యాంక్ ఎదురుగా, NH-16, అలంపురం, పెంటపాడు మండలం, ప॥గో॥ జిల్లా.</span><span class="en">Opposite I.O.C Bank, NH-16, Alampuram, Pentapadu Mandal, West Godavari District.</span></p>
+    <div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jaya+Gardens+Function+Hall+Alampuram+Pentapadu"><span class="te">మ్యాప్‌లో చూడండి</span><span class="en">Open in Maps</span></a></div>
+  </div>
+</section>
+
+<section class="rv">
+  <h2><span class="te">ఆశీస్సులతో</span><span class="en">With blessings</span></h2>
+  <p>శ్రీ గొర్ల పుల్లారావు (తాతయ్య) – శ్రీమతి పాపాయమ్మ (నాయనమ్మ)<br>శ్రీ కైలా వెంకటేశ్వర రావు (తాతయ్య) – శ్రీమతి అన్నపూర్ణ (అమ్మమ్మ)</p>
+  <div class="card" style="text-align:left">
+    <h3 style="text-align:center"><span class="te">ఆగమనాభిలాషులు</span><span class="en">With warm regards</span></h3>
+    <div class="grid2">
+      <div><p>శ్రీ కైలా నర్సింహా రావు – శ్రీమతి గంగాభవాని</p><p>శ్రీ గొర్ల రమేష్ – శ్రీమతి జగదీశ్వరి</p></div>
+      <div><p>శ్రీ గొర్ల శేషు కుమార్ – శ్రీమతి మౌనిక</p><p>శ్రీ కైలా శ్రీరామంజనేయులు – శ్రీమతి గీత సత్యశ్రీ</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rv">
+  <h2><span class="te">ఇట్లు భవదీయులు</span><span class="en">Hosted by</span></h2>
+  <p class="names2">శ్రీ గొర్ల శ్రీనివాస రావు &amp; శ్రీమతి కొండాలమ్మ<br>రోహిత్ వెంకట ఫణి వర్మ</p>
+  <p class="small"><span class="te">శశి కాలేజ్ రోడ్, గణేష్ నగర్, తాడేపల్లిగూడెం.</span><span class="en">Sasi College Road, Ganesh Nagar, Tadepalligudem.</span></p>
+  <div class="btns">
+    <a class="btn" href="tel:+919177828466"><span class="te">ఫోన్: 9177828466</span><span class="en">Call 9177828466</span></a>
+    <a class="btn alt" href="tel:+919703357979">9703357979</a>
+  </div>
+  <p class="orn" style="margin-top:30px">❖ ❖ ❖</p>
+  <p><span class="te">బంధుమిత్రుల అభినందనలతో…</span><span class="en">With the good wishes of friends and family</span></p>
+</section>
+<footer>Sai Mahesh &amp; Lohitha Sri · 25 November 2026</footer>
+
+<script>
+(function(){
+  var body=document.body,cover=document.getElementById('cover'),btn=document.getElementById('langBtn');
+  try{if(localStorage.getItem('lang')==='en'){body.classList.add('lang-en');btn.textContent='తెలుగు'}}catch(e){}
+  btn.onclick=function(){
+    var en=body.classList.toggle('lang-en');
+    document.documentElement.lang=en?'en':'te';
+    btn.textContent=en?'తెలుగు':'English';
+    try{localStorage.setItem('lang',en?'en':'te')}catch(e){}
+  };
+  var colors=['#c2314b','#e9a23b','#f4c6a5','#d9774a','#b8862b'];
+  function petals(n){
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    for(var i=0;i<n;i++){(function(i){setTimeout(function(){
+      var p=document.createElement('div');p.className='petal';
+      p.style.left=Math.random()*100+'vw';
+      p.style.background=colors[Math.floor(Math.random()*colors.length)];
+      p.style.setProperty('--dx',(Math.random()*160-80)+'px');
+      p.style.animationDuration=(6+Math.random()*6)+'s';
+      document.body.appendChild(p);setTimeout(function(){p.remove()},13000);
+    },i*160)})(i)}
+  }
+  document.getElementById('seal').onclick=function(){
+    cover.classList.add('open');
+    setTimeout(function(){cover.style.display='none'},1500);
+    petals(45);
+  };
+  document.getElementById('hero').addEventListener('click',function(){petals(14)});
+  var target=new Date('2026-11-25T21:35:00+05:30').getTime();
+  function tick(){
+    var d=Math.max(0,target-Date.now()),s=Math.floor(d/1000);
+    var v={d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60};
+    for(var k in v)document.getElementById(k).textContent=String(v[k]).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
